@@ -1,10 +1,13 @@
 const db = require("../config/db");
 const users = [];
 
-let Query = `SELET * FROM activerooms`;
-db.query(Query, (err, res) => {
-  users.push(res[0]);
-});
+// let Query = `SELET * FROM activerooms`;
+// db.query(Query, (err, res) => {
+// console.log('====================================');
+// console.log(res);
+// console.log('====================================');
+// users.push(res[0]);
+// });
 
 const addUser = ({ id, name, room }) => {
   name = name.trim().toLowerCase();

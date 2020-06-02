@@ -76,7 +76,7 @@ module.exports = (app, io, db) => {
       });
 
     socket.on("disconnect", () => {
-      let getDeleteSQL = `DELETE  FROM activerooms WHERE id = ?`;
+      let getDeleteSQL = `DELETE FROM activerooms WHERE id = ?`;
 
       db.query(getDeleteSQL, socket.id, (err, user) => {
         if (user) {
